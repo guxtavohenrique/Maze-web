@@ -1,0 +1,27 @@
+
+:root{color-scheme:dark;--bg:#000;--fg:#fff;--dim:#8a8a8a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html,body{margin:0;background:var(--bg);color:var(--fg);font-family:"Space Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-tap-highlight-color:transparent}
+body{min-height:100vh;display:flex;flex-direction:column;align-items:center;gap:14px;padding:16px}
+header{width:100%;max-width:640px;display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-bottom:2px solid var(--fg);padding-bottom:8px}
+h1{margin:0;font-size:1.5rem;font-weight:700;letter-spacing:-.02em}
+.hud{display:flex;gap:18px;font-size:1rem;font-variant-numeric:tabular-nums}
+.hud b{font-weight:700}
+.stage{position:relative}
+canvas{display:block;background:var(--bg);touch-action:none;max-width:100%}
+.overlay{position:absolute;inset:0;background:rgba(0,0,0,.94);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:20px;text-align:center}
+.overlay[hidden]{display:none}
+.overlay h2{margin:0;font-size:1.6rem;letter-spacing:-.02em}
+.overlay p{margin:0;max-width:34ch;line-height:1.45;color:var(--dim)}
+table{border-collapse:collapse;font-variant-numeric:tabular-nums}
+td,th{border:1px solid var(--fg);padding:3px 14px;font-weight:400}
+th{font-weight:700}
+.big{font-size:2.6rem;font-weight:700;color:var(--fg)}
+button{font:inherit;font-weight:700;background:var(--fg);color:var(--bg);border:2px solid var(--fg);padding:10px 22px;cursor:pointer}
+button:hover{background:var(--bg);color:var(--fg)}
+button:focus-visible{outline:3px solid var(--fg);outline-offset:3px}
+.pad{display:grid;grid-template-columns:repeat(3,56px);grid-template-rows:repeat(2,56px);gap:6px}
+.pad button{padding:0;font-size:1.3rem;background:var(--bg);color:var(--fg)}
+.pad button:active{background:var(--fg);color:var(--bg)}
+.pad .u{grid-column:2;grid-row:1}.pad .l{grid-column:1;grid-row:2}.pad .d{grid-column:2;grid-row:2}.pad .r{grid-column:3;grid-row:2}
+@media (hover:hover) and (pointer:fine){.pad{display:none}}

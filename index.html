@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="stylesheet" href="style.css">
+
+<title>Labirinto</title>
+</head>
+<body>
+<header>
+  <h1>Labirinto</h1>
+  <div class="hud">
+    <span>Fase <b id="lv">1</b></span>
+    <span>Tempo <b id="tm">0:00</b></span>
+    <span>Pontos <b id="sc">0</b></span>
+  </div>
+</header>
+
+<div class="stage">
+  <canvas id="c" aria-label="Labirinto"></canvas>
+
+  <div class="overlay" id="intro">
+    <h2>Ache a saída</h2>
+    <p>Mova-se com as setas ou WASD (ou deslize na tela). O quadrado xadrez é a saída. O tempo começa no primeiro passo.</p>
+    <table>
+      <tr><th>Tempo</th><th>Pontos</th></tr>
+      <tr><td>até 1 min</td><td>6</td></tr>
+      <tr><td>até 2 min</td><td>5</td></tr>
+      <tr><td>até 3 min</td><td>4</td></tr>
+      <tr><td>até 4 min</td><td>3</td></tr>
+      <tr><td>até 5 min</td><td>2</td></tr>
+      <tr><td>acima de 5 min</td><td>1</td></tr>
+    </table>
+    <button id="go">Jogar</button>
+  </div>
+
+  <div class="overlay" id="win" hidden>
+    <h2 id="wt">Fase concluída</h2>
+    <div class="big" id="wp">+6</div>
+    <p id="wd"></p>
+    <button id="next">Próxima fase</button>
+  </div>
+</div>
+
+<div class="pad" aria-label="Controles">
+  <button class="u" data-d="0" aria-label="Cima">▲</button>
+  <button class="l" data-d="3" aria-label="Esquerda">◀</button>
+  <button class="d" data-d="2" aria-label="Baixo">▼</button>
+  <button class="r" data-d="1" aria-label="Direita">▶</button>
+</div>
+
+</body>
+<script src="script.js"></script>
+</html>
